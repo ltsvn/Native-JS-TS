@@ -35,7 +35,7 @@ test('multiply should be correct', () => {
     expect(result4).toBe(6);
 })
 
-test('splitting into words should be correct', () => {
+test.skip('splitting into words should be correct', () => {
 
     const sent1 = 'Hello my friend!'
     const sent2 = 'JS - the best programming language.'
