@@ -51,7 +51,7 @@ test('student should be active', () =>{
     expect(student.isActive).toBe(true);
 
 })
-test(' does student live in city?', () =>{
+test.skip(' does student live in city?', () =>{
 
 
     let result1 = doesStudentLiveIn(student, 'Moscow');

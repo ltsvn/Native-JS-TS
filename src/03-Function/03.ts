@@ -1,4 +1,5 @@
 import {student, StudentType} from "../02-Object/02";
+import {GovermentType} from "../02-Object/02_02";
 
 export const sum = (a: number, b:number) => {
     return a+b
@@ -17,5 +18,11 @@ export function makeStudentActive(s: StudentType) {
 }
 
 export const doesStudentLiveIn = (s:StudentType, cityName: string) => {
-     return s.address.city.title === cityName
+     return s.address.city.title === cityName;
+}
+
+
+export const addMoneyToBudget = (building: GovermentType, budget: number) => {
+building.budget += budget;
+
 }

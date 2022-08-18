@@ -2,7 +2,7 @@
 
 export type GovermentType = {
     type:string
-    budzet: number
+    budget: number
     staffCount: number
     address: AddressType
 }
