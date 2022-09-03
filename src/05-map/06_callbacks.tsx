@@ -1,9 +1,9 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 
 export const User = ()=>{
 
     const deleteUser = (event:MouseEvent<HTMLButtonElement>) => {
-        event.currentTarget
+        return (event.currentTarget.name)
     }
     const onSave = () =>{
         alert('ugl')
@@ -12,14 +12,19 @@ export const User = ()=>{
 const onNameChanged = () => {
 
 }
+
+const onAgeChanged = (event:ChangeEvent<HTMLInputElement>) => {
+return ('age change: ' + event.currentTarget.value)
+}
 const focusLostHandler = () => {
 
     console.log('gjhv')
 }
 
-    return <div><textarea onChange={onNameChanged}>Dimych</textarea>
-        <textarea onBlur={focusLostHandler}>Dimych</textarea>
-        <button onClick={deleteUser}>delete</button>
-        <button onClick={deleteUser}>save</button>
+    return <div><textarea onChange={onNameChanged}
+                          onBlur={focusLostHandler}>Dimych</textarea>
+        <input onChange={onAgeChanged} type={'number'}/>
+        <button name='delete' onClick={deleteUser}>delete</button>
+        <button name='save' onClick={deleteUser}>save</button>
     </div>
 }
